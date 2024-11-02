@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(19, 24, 27, 1);
+    font-family: "Rubik";
+}
+
+.content {
+    width: 500px;
+    height: 650px;
+    background-color: rgb(231, 231, 231);
+    position: absolute;
+    bottom: 145px;
+    right: 50%;
+    transform: translate(50%);
+    border-radius: 1em;
+    transition: 0.45s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content:hover {
+    box-shadow: 0 0 0 2px rgb(19, 24, 27, 1), 0 0 1px 8px rgb(54, 147, 206);
+    transition: 0.45s ease-in-out;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#inp {
+    padding: 12px;
+    border: none;
+    border-radius: 1em;
+    margin-top: 75px;
+    margin-left: -80px;
+    z-index: 2;
+}
+
+.gradientBox {
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(208, 0, 255));
+    width: 205px;
+    height: 50px;
+    position: relative;
+    top: -45px;
+    left: -40px;
+    border-radius: 1em;
+    z-index: 1;
+    visibility: hidden;
+}
+
+#inp:focus {
+    outline: none;
+}
+
+#inp:focus+.gradientBox {
+    visibility: visible !important;
+}
+
+#search {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 1em;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    left: 22%;
+    top: -88px;
+    z-index: 2;
+}
+
+.gradientBoxSearch {
+    width: 50px;
+    height: 50px;
+    border-radius: 1em;
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(208, 0, 255));
+    position: relative;
+    top: -133px;
+    left: 110px;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+#search:hover+.gradientBoxSearch {
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+section {
+    background-color: rgb(255, 255, 255);
+    width: 260px;
+    height: 365px;
+    border-radius: 1em;
+    box-shadow: 7px 6px 3px rgb(149, 149, 149);
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.z::first-letter {
+    font-size: 32px;
+}
+
+#city {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+#deg {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+#desc {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+#imgg {
+    z-index: 2;
+}
+
+.gradientBoxImg {
+    width: 74px;
+    height: 72px;
+    border-radius: 1em;
+    background: linear-gradient(to right, rgba(255, 0, 0, 75%), rgba(208, 0, 255, 75%));
+    position: relative;
+    top: -96px;
+    z-index: 1;
+}
